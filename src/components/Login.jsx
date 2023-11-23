@@ -30,7 +30,7 @@ const Login = () => {
 
   const addHandler=()=>{
     if (validateLog()) {
-    axiosInst.post('http://localhost:3000/emp/login',user).then((res)=>{
+    axiosInst.post('https://empcredback.onrender.com/emp/login',user).then((res)=>{
       console.log('Login response:', res.data);
       alert(res.data.message);
       if (res.data.message === 'Login Success') {

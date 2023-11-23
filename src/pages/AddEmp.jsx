@@ -44,7 +44,7 @@ const AddEmp = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
       if (props.method === 'put') {
-      axiosInst.put('http://localhost:3000/emp/update/' + props.data._id, formData)
+      axiosInst.put('https://empcredback.onrender.com/emp/update/' + props.data._id, formData)
         .then((response) => {
           if (response.data === 'Updated Successfully') {
             alert(response.data);
@@ -56,7 +56,7 @@ const AddEmp = (props) => {
         });
     } else {
       if (validateForm()) {
-      axiosInst.post('http://localhost:3000/emp/add', formData)
+      axiosInst.post('https://empcredback.onrender.com/emp/add', formData)
         .then((res) => {
           alert(res.data);
           navigate('/admindash');

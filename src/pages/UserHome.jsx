@@ -9,7 +9,7 @@ const UserHome = () => {
        fetchPost();
     },);
     function fetchPost(){
-    axiosInstance.get('http://localhost:3000/emp/').then((res)=>{
+    axiosInstance.get('https://empcredback.onrender.com/emp/').then((res)=>{
       setData(res.data);
       console.log(cardData);
 })}

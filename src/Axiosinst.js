@@ -1,6 +1,6 @@
 import axios from 'axios';
 const axiosInst=axios.create({
-    baseURL:'http://localhost:3000'
+    baseURL:'https://empcredback.onrender.com/'
 })
 
 axiosInst.interceptors.request.use((config)=>{
